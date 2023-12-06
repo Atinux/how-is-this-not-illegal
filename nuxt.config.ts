@@ -16,6 +16,9 @@ export default defineNuxtConfig({
     }
   },
   image: {
+    alias: {
+      pokemon: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
+    },
     domains: ['raw.githubusercontent.com']
   }
 })

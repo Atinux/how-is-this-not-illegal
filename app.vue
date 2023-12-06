@@ -1,60 +1,47 @@
 <script setup lang="ts">
-import type { PokemonList } from './app/components'
-
 useServerSeoMeta({
   title: 'How is this not illegal?',
   description: 'Querying Postgres directly from your components',
+  ogTitle: 'How is this not illegal?',
+  ogDescription: 'Querying Postgres directly from your components',
+  ogUrl: 'https://how-is-this-not-illegal-nuxt.vercel.app',
+  twitterCard: 'summary_large_image',
+  twitterSite: '@atinux'
 })
-// {
-//   openGraph: {
-//     title: 'How is this not illegal?',
-//     description: 'Querying Postgres directly from your components',
-//     url: 'https://howisthisnotillegal.vercel.app',
-//     siteName: 'How is this not illegal?',
-//   },
-//   twitter: {
-//     card: 'summary_large_image',
-//     site: '@rauchg',
-//     creator: '@rauchg',
-//   },
-// }
-
+const limit = useState('limit', () => 12)
 </script>
 
 <template>
   <Html lang="en" />
-  <main class="flex min-h-screen flex-col items-center flex-start px-6 pt-6">
-    <h1 class="text-3xl font-bold mb-3">
+  <main class="flex min-h-screen text-center flex-col items-center flex-start px-6 pt-6 gap-4">
+    <h1 class="text-3xl font-bold">
       How is this not illegal?
     </h1>
-    <p class="text-center">
+    <p>
       This page renders
-      <code class="py-0.5 px-1 text-sm rounded-md border border-gray-300 bg-gray-100 dark:bg-[#444] dark:border-[#666]">
-        SELECT * FROM pokemon ORDER BY RANDOM() LIMIT 12
-      </code>
+      <code class="py-0.5 px-1 text-sm rounded-md border border-gray-300 bg-gray-100 dark:bg-[#444] dark:border-[#666]">SELECT * FROM pokemon ORDER BY RANDOM() LIMIT 12</code>
       from the edge, for every request.
     </p>
-    <p class="mt-2 text-center">
+    <p>
       What's best, the data fetching is defined directly within the
-      component tree thanks to Nuxt Server Components.
-      <a
-        href="https://twitter.com/dan_abramov/status/1341217154566402050"
-        target="_blank"
-        class="underline"
-      >
-        Legally
-      </a>
-      . (
+      component tree thanks to <a class="underline" href="https://nuxt.com/docs/guide/directory-structure/components#server-components" target="_blank">Nuxt Server Components</a>.
+      (
       <a
         class="underline"
         target="_blank"
-        href="https://github.com/Atinux/how-is-this-not-illegal"
+        href="https://github.com/Atinux/how-is-this-not-illegal/blob/main/components/PokemonList.server.vue"
       >
         Source
       </a>
       )
     </p>
-    <PokemonList />
+    <p class="text-gray-600 text-sm">
+      Originally forked from <a href="https://twitter.com/rauchg" target="_blank" class="underline">Guillermo</a>'s <a href="https://how-is-this-not-illegal.vercel.app" class="underline" target="_blank">how-is-this-not-illegal.vercel.app</a> project.
+    </p>
+    <p class="mt-4 text-center">
+      Limit: <input v-model="limit" type="number" class="w-10">
+    </p>
+    <PokemonList :limit="limit" />
   </main>
 
   <footer class="text-xs p-5 text-center text-gray-600">

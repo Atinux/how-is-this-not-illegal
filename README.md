@@ -1,8 +1,10 @@
-## How is this not illegal
+## How is this not illegal (Nuxt)
 
-This beautiful tweet by Dan Abramov [brought to life](https://github.com/rauchg/how-is-this-not-illegal/blob/main/app/page.js#L5).
+My personal attempt to use Postgres directly from a Nuxt Server Component.
 
-<a href="https://twitter.com/dan_abramov/status/1341217154566402050" target="_blank"><img width="450" alt="Dan Abramov's tweet jokingly suggesting querying Postgres directly from a React component should be illegal" src="https://user-images.githubusercontent.com/13041/235498259-55fc5ce9-ddc4-4c20-a3bf-22b9978cdfd5.png" /></a>
+Based from [Guillermo](https://github.com/rauchg)'s [How is this not illegal](https://github.com/Atinux/how-is-this-not-illegal) Next.js example.
+
+**Bonus**: I added an input to dynamically control the limit returned by the server component :sparkes:
 
 ## Setting it up
 
@@ -12,3 +14,10 @@ This beautiful tweet by Dan Abramov [brought to life](https://github.com/rauchg/
    ```sh
    psql "postgres://{user}:{password}@{name}.{location}.postgres.vercel-storage.com:5432/verceldb" -f init.sql
    ```
+
+## Running it locally
+
+```
+pnpm i
+pnpm dev
+```
