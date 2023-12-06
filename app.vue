@@ -35,11 +35,11 @@ const limit = useState('limit', () => 12)
       </a>
       )
     </p>
-    <p class="text-gray-600 text-sm">
+    <p class="text-gray-600 dark:text-gray-500 text-sm">
       Originally forked from <a href="https://twitter.com/rauchg" target="_blank" class="underline">Guillermo</a>'s <a href="https://how-is-this-not-illegal.vercel.app" class="underline" target="_blank">how-is-this-not-illegal.vercel.app</a> project.
     </p>
     <p class="mt-4 text-center">
-      Limit: <input v-model="limit" type="number" class="w-10">
+      Limit: <input v-model="limit" type="number" class="w-10 bg-transparent">
     </p>
     <PokemonList :limit="limit" />
   </main>
