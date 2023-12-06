@@ -1,0 +1,18 @@
+{
+  "@vite/client": {
+    "prefetch": true,
+    "isEntry": true,
+    "file": "@vite/client",
+    "css": [],
+    "module": true,
+    "resourceType": "script"
+  },
+  "/Users/atinux/Projects/atinux/how-is-this-not-illegal/node_modules/.pnpm/nuxt@3.8.2_@types+node@20.10.3_eslint@8.55.0_typescript@5.0.4_vite@5.0.6/node_modules/nuxt/dist/app/entry.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "isEntry": true,
+    "file": "/Users/atinux/Projects/atinux/how-is-this-not-illegal/node_modules/.pnpm/nuxt@3.8.2_@types+node@20.10.3_eslint@8.55.0_typescript@5.0.4_vite@5.0.6/node_modules/nuxt/dist/app/entry.js"
+  }
+}

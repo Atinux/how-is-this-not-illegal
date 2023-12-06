@@ -1,0 +1,1 @@
+export { default } from "file:///Users/atinux/Projects/atinux/how-is-this-not-illegal/node_modules/.pnpm/@nuxt+vite-builder@3.8.2_@types+node@20.10.3_eslint@8.55.0_typescript@5.0.4_vue@3.3.10/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
